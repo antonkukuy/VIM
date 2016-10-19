@@ -1,0 +1,381 @@
+ViATC 帮助 Help
+=========
+
+一、说明
+
+VIATC与VIM类似，拥有三种模式
+
+---VIM操作模式
+   这个模式下能使用hjkl等快捷键的功能，详见快捷键列表。使用VIATC后，正常初始化TC时的默认模式，从命令行模式切换回VIM操作模式，可以按Esc。
+---命令行模式
+   这个模式下，能够正常的使用TC自带的命令行，如cd，同时也能运行一些VIATC的命令，详见命令列表。按下“;”可以切换到命令行模式，设置输入焦点到命令行窗口。按下“:”类似功能，不过会添加一个“:”。
+---编辑模式
+   当要进行修改文件名时，按下i可切换到编辑模式。编辑模式下，可以使用hjkl来移动，d向后删除，x向前删除,这几个命令都可以使用数字加快捷键的形式。如果要添加新字符时，请再按下i进入编辑插入模式，按Esc可退回编辑模式，再按Esc可退回VIM操作模式。
+
+按下ALT+`禁止所有VIATC的快捷键，再按一次ALT+`重新启用VIATC快捷键。也可以通过选项来禁止VIM模式。
+
+注： 帮助界面支持 hjkl 移动, Esc退出帮助界面
+=========
+
+二、快捷键列表
+模式： 
+  Esc  : 切换到Vim模式 
+  ;    : 切换到命令行模式 
+  :    : 切换到命令行模式(并输入:) 
+  Alt+`  : 禁用/启用VIM热键(此时所有VIM键都不起作用)
+
+移动:
+ <Num>j  : 向下移动Num次	 
+ <Num>k  : 向上移动Num次	 
+ <Num>h  : 向左移动Num次	 
+ <Num>l  : 向右移动Num次     
+ <Num>J  : 选择从当前光标开始向下N个文件
+ <Num>K  : 选择从当前光标开始向上N个文件
+ <Num>G  : 跳转到第Num行
+
+导航:
+ H  : 后退 
+ L  : 前进 
+ u  : 返回上一级
+ U  : 返回根目录	 
+ o  : 打开左侧驱动器列表	
+ O  : 打开右侧驱动器列表
+ d  : 打开常用文件夹 
+ `  : 查看文件夹历史
+ ~  : 保存文件夹历史
+
+文件操作： 
+ r  : 重命名当前文件（夹）——ri 直接重命名 
+ R  : 批量重命名所有选中的文件（夹）
+ i  : 进入文件名编辑模式
+ I  : 新建文本夹 
+ y  : 复制当前文件名 
+ Y  : 复制文件名及完整路径 
+ x  : 删除文件 
+ X  : 强制删除文件 
+ a  : 改变文件属性
+ A  : 文件关联
+
+搜索及工具： 
+ /  : 启用快速搜索 
+ ？ : 启用高级搜索
+ =  : 目标 = 来源
+ v  : 选择视图 
+ q  : 快速查看
+ w  : 比较文件夹
+ W  : 标出新文件，隐藏相同者
+ e  : 显示右键菜单
+ E  : 从当前路径打开命令行(CMD.exe)
+ p  : 压缩文件
+ P  : 解压文件
+ t  : 新建标签
+ T  : 新建标签(在后台)
+
+选择：
+ [  : 全选
+ ]  : 全不选
+ \  : 反选
+ |  : 隐藏所有未选择的文件
+ ,  : 临时保存选择列表
+ .  : 回复最后保存的选择列表
+ #  : 选择一组文件（仅文件）
+ $  : 不选择一组文件（仅文件）
+ %  : 选择一组文件（仅文件夹）
+ ^  : 不选择一组文件（仅文件夹）
+ &  : 选择相同文件名
+ *  : 不选择相同文件名
+ (  : 选择相同扩展名
+ )  : 不选择相同扩展名
+ {  : 选择一组文件(夹)
+ }  : 不选择一组文件(夹)
+ 
+
+组合键：
+ zm : 最大化TC
+ zn : 最小化TC
+ zr : 恢复TC正常 
+ zi : 最大化右面板
+ zo : 最大化左面板
+ zz : 平分面板窗口
+ zt : 顶置/取消顶置TC
+ zv : 纵向排列 
+
+ cr : 清空左面板文件夹历史(需要重启TC)
+ cl : 清空右面板文件夹历史(需要重启TC)
+ cc : 清空命令行历史(需要重启TC）
+
+ sn : 按文件名排序
+ se : 按扩展名排序
+ sd : 按日期排序
+ ss : 按大小排序
+ sr : 反向排序
+ s1 : 按第1列排序
+ s2 : 按第2列排序
+ …… 依此类推
+ s9 : 按第9列排序
+
+ gg : 交换左右窗口
+ gG : 交换左右窗口及标签
+ gn : 新建标签(并打开光标处的文件夹)
+ gN : 新建标签(在另一窗口打开文件夹)
+ gl : 锁定/解锁当前标签
+ gL : 锁定/解锁当前标签(可改变文件夹)
+ gt : 转到下一个标签
+ gT : 转到上一个标签
+ gc : 关闭当前标签
+ gC : 关闭所有标签
+ g1 : 激活标签1
+ g2 : 激活标签2
+ …… 依此类推
+ g9 : 激活标签9
+
+ Vb : 显示/隐藏工具栏
+ Vd : 显示/隐藏驱动器按钮
+ Vo : 显示/隐藏两个驱动器按钮栏
+ Vl : 切换:平坦/立体驱动器按钮
+ Vr : 显示/隐藏驱动器列表
+ Vw : 显示/隐藏文件夹标签
+ Vc : 显示/隐藏当前文件夹栏
+ Vp : 显示/隐藏路径导航栏
+ Va : 光标位于可点击部分之上时自动显示文件夹列表
+ Vh : 显示/隐藏文件夹历史和常用文件夹按钮
+ Vt : 显示/隐藏排序制表符
+ Vs : 显示/隐藏状态栏
+ Vn : 显示/隐藏命令行
+ Vf : 显示/隐藏功能键按钮
+ Vi : 切换:平坦/立体用户界面
+ Vx : 显示/隐藏XP主题背景
+ 
+ n  : 预留给map自定义功能，详细见:map 
+
+
+更多：等待您的建议……
+=========
+
+三、命令行列表
+
+在TC的命令行窗口里输入以下命令 
+
+:help 打开VIATC帮助
+:set  打开VIATC选项  
+:config 打开TC选项
+:q    退出viatc
+:w    保存当前选择列表 
+:r    恢复当前选择列表  
+:d    删除保存的选择列表
+:!    打开命令行(CMD) 
+:pwd  查看当前路径
+:top  设置/取消顶置TC 
+:download  后台传输管理器
+:sy   同步文件夹 
+:lm   查看所有标记内容
+:map  自定义映射功能，可以映射以n开头的任意两位组合键
+      如映射nc为cm_SrcComments，则可以按以下格式输入
+      :map nc cm_SrcComments
+      再按下nc时，相当于直接在命令行里输入cm_SrcComments
+
+=========
+
+四、关于 
+
+Vim Mode At Total Commander 7.5+
+
+Version 0.4.1
+
+By linxinhong 2012/02/07
+
+主页：http://sf.net/p/viatc 
+
+有关ViATC的使用过程遇到的问题和建议可以发邮件到linxinhong.sky@gmail.com
+关于ViATc的更多想法，也可以加Q群7995919
+
+
+=========
+what is viatc
+
+viatc is an advanced tool for those who want to use VIM keys in Total Commander.
+like vim , you can switch between three modes in viatc
+
+1.VIM Mode
+VIM mode allows you to take advantage of VIM keys such as"hjkl". VIM mode is turned on by default. press Esc to switch from command line mode to VIM mode.
+2.Command Mode
+In command line mode, you can use TC native command line such as "cd", in the meantime, viatc command is enabled as well. press ";" to enable command line mode, press ":" to enable command line mode and insert ":".
+
+3.Edit Mode
+Press "r" to rename file . this time , hjkl to move and x or d to delete character . If you need to add character , please press i again , to edit-input mode . press Esc to edit mode and press Esc again to vi mode .
+
+To Enable/Disable viatc, press ALT+`
+
+you can also use "hjkl" to navigate in help window. press Esc to close help window.
+=========
+Hotkeys
+
+Modes
+Esc : Enable Vim mode
+; : Enable command line mode
+: : Enable command line mode and insert ":"
+i : Enable edit mode
+Alt+` : Enable/disable all vim shortcuts
+
+Moving around
+<Num>j : Move down by <Num> times
+<Num>k : Move up by <num> times
+<Num>h : Move to left by <num> times
+<Num>l : Move to right by <num> times
+<Num>J : Select <num> files down from current
+<Num>K : Select <num> files up from current
+<Num>G : Go to <Num> line
+
+Navigation
+H : Back
+L : Forward
+u : Upper directory 
+U : Go to root directory
+o : Open the left drive list
+O : Open the right drive list 
+d : Directory hotlist (Like ctrl+d)
+` : Display directory history
+~ : Save directory history
+
+File 
+r : Rename Only
+R : Multi-rename
+i : Edit text at rename mode
+I : Create a folder
+y : Copy the file name to clipboard
+Y : Copy the file name and path to clipboard
+x : delete file 
+X : Force delete files
+a : Change attributes
+A : Files associate
+
+Search and Tools
+/ : Quick search
+？: Advanced search
+= : Target = source
+v : view change 
+q : Quick view
+w : Compare directories
+W : Mark Newer ,Hide same files
+e : Show context menu
+E : Open command prompt window
+p : Pack 
+P : Unpack
+t : Open new tab
+T : Open new tab in backgroud
+
+Mark files
+[ : Select all 
+] : Unselect all 
+\ : Invert selection
+| : Hide files which aren`t selected
+, : Temporarily save selection
+. : Selection before last operation
+# : Select group : just files
+$ : Unselect group : just files
+% : Select group : just folders
+^ : Unselect group : just folders
+& : Select all files with same name
+* : Unselect all files with same name
+( : Select all files with same ext.
+) : Unselect all files with same ext.
+{ : Select Group
+} : Unselect Group
+
+
+Group Key：
+==z7==
+zm : Maximize TC
+zn : Minimum TC
+zr : Restore TC
+zi : Maximize the right panel
+zo : Maximize the left panel
+zz : Split panel window
+zv : Vertical　arrangment
+==c3==
+cl : Clear left history
+cr : Clear right history
+cc : Clear command history
+==s9==
+sn : sort by file name 
+se : Sort by extension
+sd : Sort by date
+ss : Sort by size
+sr : Reverse　order
+s1 : Sort by 1st Column 
+s2 : Sort by 2nd Column 
+…… 
+s9 : Sort by 9th Column 
+==g14==
+gt : Switch to next Tab 
+gT : Switch to previous Tab
+gc : Close tab
+gC : Close all tab
+gg : Swap panels
+gG : Swap all Tabs
+gn : Open dir under cursor in tab
+gN : Open dir under cursor (other window)
+gl : Turn on/off tab locking
+gL : Same gl but with dir changes allowed
+g1 : Activate first tab
+g2 : Activate second tab
+……
+g9 : Activate 9th tab
+==V16==
+Vb : Show/Hide button bar
+Vd : Show/Hide drive buttons
+Vo : Show/Hide two drive button bars
+Vl : Flat icons
+Vi : Flat user interface(button bar configured separately
+Vr : Show/Hide drive combobox
+Vw : Show/Hide folder tabs
+Vc : Show/Hide current directory
+Vp : Show/Hide clickable path parts("breadcrumb bar")
+Va : Auto-open when moving mouse over it
+Vh : Show/Hide buttons for history list and hotlist
+Vt : Show/Hide tabstop header
+Vs : Show/Hide status bar
+Vn : Show/Hide command line
+Vf : Show/Hide function key buttons
+Vx : Windows XP theme background(menu+all bars)
+
+
+=========
+Command :
+You can type in these commands in TC command window 
+
+:help Open VIATC help window
+:set Open VIATC options
+:config Open TC options
+:q Quit viatc
+:w Save the current selection 
+:r Restore the current selection 
+:d Delete saved selection 
+:! Open a command line (CMD.exe)
+:pwd Show current path
+:top Turn on/off "Always on Top"
+:download Background transfer manager
+:sy Synchronize directories
+:lm view all marks
+
+
+=========
+
+Vim Mode At Total Commander 7.5+
+
+Version 0.4.1
+
+By linxinhong 2012/02/07
+
+HomePage：http://sf.net/p/viatc
+
+Email:linxinhong.sky@gmail.com
+
+Technical support can be received via e-mail "viatc suggestion" or "viatc bugs" in subject is preferred, Chinese and English preferred. 
+
+
+
+
+
+
+
